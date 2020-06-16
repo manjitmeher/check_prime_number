@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdbool.h>
+int main()
+{
+    int a,b=0;
+    bool c;
+    printf("Enter a number:");
+    scanf("%d",&a);
+    for(b=2; b<a-1; b++)
+    {
+        c=a%b==0?printf("%d is a prime number.",a):printf("%d is not a prime number. ",a);
+        break;
+    }
+    return 0;
+}
