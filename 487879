@@ -1,22 +1,41 @@
 #include<stdio.h>
-int main ()
+int main()
 {
-    int a,b;
-    printf("Enter a positive number: ");
+    int a=0,b=2;
+    int c=1;
+    printf("Enter a number:");
     scanf("%d",&a);
-    for(b=2;b<=a;b++)
+    if(a==2)
     {
-    if(a%b==0)
-    {
-    break ;
+        printf("%d is not a prime number. ",a);
     }
-    }
-    if(b>a/2)
+    else if(a>2)
     {
-        printf("%d is a prime number. ",a);
+        while(a>=b)
+        {
+            if(a%b==0)
+            {
+                c++;
+            }
+            b++;
+        }
     }
     else
     {
-        printf("%d is not a prime number. ",a);
+    }
+    if(c!=1)
+    {
+        if(c>2)
+        {
+            printf("%d is not prime number. ",a);
+        }
+        else if(c<=2)
+        {
+            printf("%d is a prime number.",a);
+        }
+        else
+        {
+            printf("\n");
+        }
     }
 }
